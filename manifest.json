@@ -1,0 +1,13 @@
+{
+    "name": "Carlos Rojas Blog",
+    "short_name": "Carlos Rojas Blog",
+    "icons": [{
+        "src": "/logo_192_by_192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+    }],
+    "start_url": "/",
+    "display": "standalone",
+    "gcm_sender_id": "381093810262",
+    "gcm_user_visible_only": true
+}
