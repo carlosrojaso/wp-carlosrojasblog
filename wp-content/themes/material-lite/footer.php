@@ -66,7 +66,6 @@
         <?php }?>
         <div class="mdl-color--black">
             <div class="site-info full footer-con text-center">
-                <a href="<?php echo esc_url( __( 'http://wordpress.org/', 'material-lite' ) ); ?>" ><?php _e('Proudly powered by WordPress', 'material-lite' ); ?></a><br/><a href="<?php echo esc_url('http://ghuwad.com'); ?>"><?php _e('Developed with <i class="material-icons mdl-color-text--red">favorite</i> by Ghuwad.com', 'material-lite'); ?></a>
             </div>
         </div>
     </footer>
