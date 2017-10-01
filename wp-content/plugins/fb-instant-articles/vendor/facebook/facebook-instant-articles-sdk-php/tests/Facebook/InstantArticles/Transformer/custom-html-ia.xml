@@ -197,6 +197,11 @@
         <img src="http://example.com/image.jpg"/>
         <figcaption>caption</figcaption>
       </figure>
+      <figure>
+        <img src="http://example.com/image.jpg"/>
+        <figcaption>caption <i><b>bold italic</b></i> and <a href="http://domain.com">link</a><cite>photo credit <i><b>bold italic</b></i> and <a href="http://domain.com">link</a></cite></figcaption>
+      </figure>
+      <figure><img src="http://example.com/credit-image.jpg"/></figure>
     </article>
   </body>
 </html>

@@ -1,65 +1,5 @@
 [
     {
-        "name": "facebook/graph-sdk",
-        "version": "5.5.0",
-        "version_normalized": "5.5.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/facebook/php-graph-sdk.git",
-            "reference": "93d7dc87e55a541d2e27d38f3aed40abbffdf6e1"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/facebook/php-graph-sdk/zipball/93d7dc87e55a541d2e27d38f3aed40abbffdf6e1",
-            "reference": "93d7dc87e55a541d2e27d38f3aed40abbffdf6e1",
-            "shasum": ""
-        },
-        "require": {
-            "php": "^5.4|^7.0"
-        },
-        "require-dev": {
-            "guzzlehttp/guzzle": "~5.0",
-            "mockery/mockery": "~0.8",
-            "phpunit/phpunit": "~4.0"
-        },
-        "suggest": {
-            "guzzlehttp/guzzle": "Allows for implementation of the Guzzle HTTP client",
-            "paragonie/random_compat": "Provides a better CSPRNG option in PHP 5"
-        },
-        "time": "2017-04-20T14:15:02+00:00",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "5.x-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Facebook\\": "src/Facebook/"
-            },
-            "files": [
-                "src/Facebook/polyfills.php"
-            ]
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "Facebook Platform"
-        ],
-        "authors": [
-            {
-                "name": "Facebook",
-                "homepage": "https://github.com/facebook/php-graph-sdk/contributors"
-            }
-        ],
-        "description": "Facebook SDK for PHP",
-        "homepage": "https://github.com/facebook/php-graph-sdk",
-        "keywords": [
-            "facebook",
-            "sdk"
-        ]
-    },
-    {
         "name": "apache/log4php",
         "version": "2.3.0",
         "version_normalized": "2.3.0.0",
@@ -71,7 +11,7 @@
         "require": {
             "php": ">=5.2.7"
         },
-        "time": "2012-10-26T09:13:25+00:00",
+        "time": "2012-10-26 09:13:25",
         "type": "library",
         "installation-source": "source",
         "autoload": {
@@ -89,111 +29,6 @@
             "log",
             "logging",
             "php"
-        ]
-    },
-    {
-        "name": "facebook/facebook-instant-articles-sdk-php",
-        "version": "v1.6.1",
-        "version_normalized": "1.6.1.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/facebook/facebook-instant-articles-sdk-php.git",
-            "reference": "511d15d741796c7da68742e565d98f97464d2d6b"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/facebook/facebook-instant-articles-sdk-php/zipball/511d15d741796c7da68742e565d98f97464d2d6b",
-            "reference": "511d15d741796c7da68742e565d98f97464d2d6b",
-            "shasum": ""
-        },
-        "require": {
-            "apache/log4php": "2.3.0",
-            "facebook/graph-sdk": "~5.0",
-            "php": "^5.4 || ^7.0",
-            "symfony/css-selector": "2.8.* || ^3.0"
-        },
-        "require-dev": {
-            "fzaninotto/faker": "^1.6.0",
-            "phpunit/phpunit": "^4.8",
-            "squizlabs/php_codesniffer": "^2.6.0"
-        },
-        "time": "2017-06-20T13:45:09+00:00",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Facebook\\InstantArticles\\": "src/Facebook/InstantArticles/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "proprietary"
-        ],
-        "authors": [
-            {
-                "name": "Facebook",
-                "homepage": "https://github.com/facebook/facebook-instant-articles-sdk-php/contributors"
-            }
-        ],
-        "description": "Facebook Instant Articles SDK for PHP",
-        "homepage": "https://github.com/facebook/facebook-instant-articles-sdk-php",
-        "keywords": [
-            "articles",
-            "facebook",
-            "instant",
-            "sdk"
-        ]
-    },
-    {
-        "name": "facebook/facebook-instant-articles-sdk-extensions-in-php",
-        "version": "v0.1.1",
-        "version_normalized": "0.1.1.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/facebook/facebook-instant-articles-sdk-extensions-in-php.git",
-            "reference": "f574ad6230ced8d8159b7b59a41ac6238d8d6353"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/facebook/facebook-instant-articles-sdk-extensions-in-php/zipball/f574ad6230ced8d8159b7b59a41ac6238d8d6353",
-            "reference": "f574ad6230ced8d8159b7b59a41ac6238d8d6353",
-            "shasum": ""
-        },
-        "require": {
-            "facebook/facebook-instant-articles-sdk-php": "^1.6",
-            "php": "^5.4 || ^7.0"
-        },
-        "require-dev": {
-            "phpunit/phpunit": "^4.8"
-        },
-        "time": "2017-06-26T19:59:19+00:00",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Facebook\\InstantArticles\\": "src/Facebook/InstantArticles/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "proprietary"
-        ],
-        "authors": [
-            {
-                "name": "Facebook",
-                "homepage": "https://github.com/facebook/facebook-instant-articles-sdk-extensions-in-php/contributors"
-            }
-        ],
-        "description": "Facebook Instant Articles SDK Extensions in PHP to transform Instant Articles markup file into AMP",
-        "homepage": "https://github.com/facebook/facebook-instant-articles-sdk-extensions-in-php",
-        "keywords": [
-            "amp",
-            "articles",
-            "extensions",
-            "facebook",
-            "instant",
-            "instantarticles",
-            "sdk"
         ]
     },
     {
@@ -220,7 +55,7 @@
         "require-dev": {
             "phpunit/phpunit": "~4.0"
         },
-        "time": "2017-05-22T02:43:20+00:00",
+        "time": "2017-05-22 02:43:20",
         "bin": [
             "scripts/phpcs",
             "scripts/phpcbf"
@@ -277,41 +112,115 @@
         ]
     },
     {
-        "name": "wp-coding-standards/wpcs",
-        "version": "0.11.0",
-        "version_normalized": "0.11.0.0",
+        "name": "facebook/facebook-instant-articles-sdk-extensions-in-php",
+        "version": "v0.1.1",
+        "version_normalized": "0.1.1.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards.git",
-            "reference": "407e4b85f547a5251185f89ceae6599917343388"
+            "url": "https://github.com/facebook/facebook-instant-articles-sdk-extensions-in-php.git",
+            "reference": "f574ad6230ced8d8159b7b59a41ac6238d8d6353"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/WordPress-Coding-Standards/WordPress-Coding-Standards/zipball/407e4b85f547a5251185f89ceae6599917343388",
-            "reference": "407e4b85f547a5251185f89ceae6599917343388",
+            "url": "https://api.github.com/repos/facebook/facebook-instant-articles-sdk-extensions-in-php/zipball/f574ad6230ced8d8159b7b59a41ac6238d8d6353",
+            "reference": "f574ad6230ced8d8159b7b59a41ac6238d8d6353",
             "shasum": ""
         },
         "require": {
-            "squizlabs/php_codesniffer": "^2.8.1"
+            "facebook/facebook-instant-articles-sdk-php": "^1.6",
+            "php": "^5.4 || ^7.0"
         },
-        "time": "2017-03-20T23:17:58+00:00",
+        "require-dev": {
+            "phpunit/phpunit": "^4.8"
+        },
+        "time": "2017-06-26 19:59:19",
         "type": "library",
         "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Facebook\\InstantArticles\\": "src/Facebook/InstantArticles/"
+            }
+        },
         "notification-url": "https://packagist.org/downloads/",
         "license": [
-            "MIT"
+            "proprietary"
         ],
         "authors": [
             {
-                "name": "Contributors",
-                "homepage": "https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/graphs/contributors"
+                "name": "Facebook",
+                "homepage": "https://github.com/facebook/facebook-instant-articles-sdk-extensions-in-php/contributors"
             }
         ],
-        "description": "PHP_CodeSniffer rules (sniffs) to enforce WordPress coding conventions",
+        "description": "Facebook Instant Articles SDK Extensions in PHP to transform Instant Articles markup file into AMP",
+        "homepage": "https://github.com/facebook/facebook-instant-articles-sdk-extensions-in-php",
         "keywords": [
-            "phpcs",
-            "standards",
-            "wordpress"
+            "amp",
+            "articles",
+            "extensions",
+            "facebook",
+            "instant",
+            "instantarticles",
+            "sdk"
+        ]
+    },
+    {
+        "name": "facebook/graph-sdk",
+        "version": "5.6.0",
+        "version_normalized": "5.6.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/facebook/php-graph-sdk.git",
+            "reference": "34f5e5993c67acd264017373f23848961585dcac"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/facebook/php-graph-sdk/zipball/34f5e5993c67acd264017373f23848961585dcac",
+            "reference": "34f5e5993c67acd264017373f23848961585dcac",
+            "shasum": ""
+        },
+        "require": {
+            "php": "^5.4|^7.0"
+        },
+        "require-dev": {
+            "guzzlehttp/guzzle": "~5.0",
+            "mockery/mockery": "~0.8",
+            "phpunit/phpunit": "~4.0"
+        },
+        "suggest": {
+            "guzzlehttp/guzzle": "Allows for implementation of the Guzzle HTTP client",
+            "paragonie/random_compat": "Provides a better CSPRNG option in PHP 5"
+        },
+        "time": "2017-07-23 14:06:52",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "5.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Facebook\\": "src/Facebook/"
+            },
+            "files": [
+                "src/Facebook/polyfills.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "Facebook Platform"
+        ],
+        "authors": [
+            {
+                "name": "Facebook",
+                "homepage": "https://github.com/facebook/php-graph-sdk/contributors"
+            }
+        ],
+        "description": "Facebook SDK for PHP",
+        "homepage": "https://github.com/facebook/php-graph-sdk",
+        "keywords": [
+            "facebook",
+            "sdk"
         ]
     },
     {
@@ -332,7 +241,7 @@
         "require": {
             "php": ">=5.3.9"
         },
-        "time": "2017-05-01T14:31:55+00:00",
+        "time": "2017-05-01 14:31:55",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -368,5 +277,99 @@
         ],
         "description": "Symfony CssSelector Component",
         "homepage": "https://symfony.com"
+    },
+    {
+        "name": "facebook/facebook-instant-articles-sdk-php",
+        "version": "v1.6.2",
+        "version_normalized": "1.6.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/facebook/facebook-instant-articles-sdk-php.git",
+            "reference": "f18461923e17af6f05120c687c9f20a540f3d420"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/facebook/facebook-instant-articles-sdk-php/zipball/f18461923e17af6f05120c687c9f20a540f3d420",
+            "reference": "f18461923e17af6f05120c687c9f20a540f3d420",
+            "shasum": ""
+        },
+        "require": {
+            "apache/log4php": "2.3.0",
+            "facebook/graph-sdk": "~5.0",
+            "php": "^5.4 || ^7.0",
+            "symfony/css-selector": "2.8.* || ^3.0"
+        },
+        "require-dev": {
+            "fzaninotto/faker": "^1.6.0",
+            "phpunit/phpunit": "^4.8",
+            "squizlabs/php_codesniffer": "^2.6.0"
+        },
+        "time": "2017-07-27 19:19:51",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Facebook\\InstantArticles\\": "src/Facebook/InstantArticles/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "proprietary"
+        ],
+        "authors": [
+            {
+                "name": "Facebook",
+                "homepage": "https://github.com/facebook/facebook-instant-articles-sdk-php/contributors"
+            }
+        ],
+        "description": "Facebook Instant Articles SDK for PHP",
+        "homepage": "https://github.com/facebook/facebook-instant-articles-sdk-php",
+        "keywords": [
+            "articles",
+            "facebook",
+            "instant",
+            "sdk"
+        ]
+    },
+    {
+        "name": "wp-coding-standards/wpcs",
+        "version": "0.12.0",
+        "version_normalized": "0.12.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards.git",
+            "reference": "300c15796584d6b63f31841daf674886303af573"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/WordPress-Coding-Standards/WordPress-Coding-Standards/zipball/300c15796584d6b63f31841daf674886303af573",
+            "reference": "300c15796584d6b63f31841daf674886303af573",
+            "shasum": ""
+        },
+        "require": {
+            "squizlabs/php_codesniffer": "^2.9.0"
+        },
+        "suggest": {
+            "dealerdirect/phpcodesniffer-composer-installer": "*"
+        },
+        "time": "2017-07-20 20:11:03",
+        "type": "phpcodesniffer-standard",
+        "installation-source": "dist",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Contributors",
+                "homepage": "https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/graphs/contributors"
+            }
+        ],
+        "description": "PHP_CodeSniffer rules (sniffs) to enforce WordPress coding conventions",
+        "keywords": [
+            "phpcs",
+            "standards",
+            "wordpress"
+        ]
     }
 ]

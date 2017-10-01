@@ -92,6 +92,48 @@ class Jetpack_CLI extends WP_CLI_Command {
 	}
 
 	/**
+	 * Tests the active connection
+	 *
+	 * Does a two-way test to verify that the local site can communicate with remote Jetpack/WP.com servers and that Jetpack/WP.com servers can talk to the local site.
+	 *
+	 * ## EXAMPLES
+	 *
+	 * wp jetpack test-connection
+	 *
+	 * @subcommand test-connection
+	 */
+	public function test_connection( $args, $assoc_args ) {
+		if ( ! Jetpack::is_active() ) {
+			WP_CLI::error( __( 'Jetpack is not currently connected to WordPress.com', 'jetpack' ) );
+		}
+
+		$response = Jetpack_Client::wpcom_json_api_request_as_blog(
+			sprintf( '/jetpack-blogs/%d/test-connection', Jetpack_Options::get_option( 'id' ) ),
+			Jetpack_Client::WPCOM_JSON_API_VERSION
+		);
+
+		if ( is_wp_error( $response ) ) {
+			/* translators: %1$s is the error code, %2$s is the error message */
+			WP_CLI::error( sprintf( __( 'Failed to test connection (#%1$s: %2$s)', 'jetpack' ), $response->get_error_code(), $response->get_error_message() ) );
+		}
+
+		$body = wp_remote_retrieve_body( $response );
+		if ( ! $body ) {
+			WP_CLI::error( __( 'Failed to test connection (empty response body)', 'jetpack' ) );
+		}
+
+		$result = json_decode( $body );
+		$is_connected = (bool) $result->connected;
+		$message = $result->message;
+
+		if ( $is_connected ) {
+			WP_CLI::success( $message );
+		} else {
+			WP_CLI::error( $message );
+		}
+	}
+
+	/**
 	 * Disconnect Jetpack Blogs or Users
 	 *
 	 * ## OPTIONS
@@ -831,17 +873,19 @@ class Jetpack_CLI extends WP_CLI_Command {
 	 * : Slug of the requested plan, e.g. premium
 	 * [--wpcom_user_id=<user_id>]
 	 * : WordPress.com ID of user to connect as (must be whitelisted against partner key)
-	 * [--force_register=<register>]
-	 * : Whether to force a site to register
 	 * [--onboarding=<onboarding>]
 	 * : Guide the user through an onboarding wizard
+	 * [--force_register=<register>]
+	 * : Whether to force a site to register
+	 * [--force_connect=<force_connect>]
+	 * : Force JPS to not reuse existing credentials
 	 *
 	 * ## EXAMPLES
 	 *
 	 *     $ wp jetpack partner_provision '{ some: "json" }' premium 1
 	 *     { success: true }
 	 *
-	 * @synopsis <token_json> [--wpcom_user_id=<user_id>] [--plan=<plan_name>] [--force_register=<register>] [--onboarding=<onboarding>]
+	 * @synopsis <token_json> [--wpcom_user_id=<user_id>] [--plan=<plan_name>] [--onboarding=<onboarding>] [--force_register=<register>] [--force_connect=<force_connect>]
 	 */
 	public function partner_provision( $args, $named_args ) {
 		list( $token_json ) = $args;
@@ -936,6 +980,10 @@ class Jetpack_CLI extends WP_CLI_Command {
 
 		if ( isset( $named_args['onboarding'] ) && ! empty( $named_args['onboarding'] ) ) {
 			$request_body['onboarding'] = intval( $named_args['onboarding'] );
+		}
+
+		if ( isset( $named_args['force_connect'] ) && ! empty( $named_args['force_connect'] ) ) {
+			$request_body['force_connect'] = intval( $named_args['force_connect'] );
 		}
 
 		$request = array(

@@ -601,6 +601,45 @@
                 ]
             }
         }
+    },
+    {
+        "class": "ImageRule",
+        "selector": ".image-with-credit-and-caption",
+        "properties": {
+            "image.url": {
+                "type": "string",
+                "selector": "img",
+                "attribute": "src"
+            },
+            "image.caption": {
+                "type": "element",
+                "selector": "p.caption"
+            },
+            "image.credit": {
+                "type": "element",
+                "selector": "p.credit"
+            }
+        }
+    },
+    {
+        "class": "ImageRule",
+        "selector": ".image-with-credit-only",
+        "properties": {
+            "image.url": {
+                "type": "string",
+                "selector": "img",
+                "attribute": "src"
+            },
+            "image.caption": {
+                "type": "element",
+                "selector": "p.caption"
+            },
+            "image.credit": {
+                "type": "element",
+                "selector": "p.credit"
+            }
+        }
     }
+
   ]
 }
